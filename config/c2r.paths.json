@@ -1,0 +1,10 @@
+{
+  "workspaceRoot": "D:/00_Cerveau_IA",
+  "competencesDir": "D:/00_Cerveau_IA/Conpetances",
+  "validImagesDir": "D:/00_Cerveau_IA/Conpetances/Image/outputs/Image valide",
+  "legacyC2rScript": "D:/00_Cerveau_IA/Conpetances/generate-image-c2r-system.mjs",
+  "legacySdxlScript": "D:/00_Cerveau_IA/Conpetances/generate-image-local-sdxl.mjs",
+  "comfyApiUrl": "http://127.0.0.1:8188",
+  "comfyOutputDir": "D:/00_Cerveau_IA/Conpetances/Video/ComfyUI/ComfyUI_windows_portable/ComfyUI/output",
+  "comfyInputDir": "D:/00_Cerveau_IA/Conpetances/Video/ComfyUI/ComfyUI_windows_portable/ComfyUI/input"
+}

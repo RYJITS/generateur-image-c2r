@@ -1,0 +1,31 @@
+{
+  "id": "v5-valid-95",
+  "label": "C2R V5 Valid 95",
+  "status": "stable-reference",
+  "target": "95 percent visual intention match to Image valide",
+  "model": "juggernaut_xl.safetensors",
+  "profile": "realiste",
+  "width": 832,
+  "height": 1216,
+  "steps": 42,
+  "guidance": 5.35,
+  "poseStrength": 0.58,
+  "poseEnd": 0.68,
+  "textureStrength": 0.56,
+  "textureEnd": 0.86,
+  "loras": [
+    { "name": "sdxl_detail.safetensors", "strength": 0.62 },
+    { "name": "sdxl_anatomy.safetensors", "strength": 0.55 },
+    { "name": "sdxl_oil_painting.safetensors", "strength": 0.72 }
+  ],
+  "promptLock": [
+    "C2R V5 validated-image DNA",
+    "thick wet impasto oil paint dress",
+    "real adult woman in readable real environment",
+    "deep foreground mid-ground and background layers",
+    "dynamic narrative action pose",
+    "paint connected to body, dress, floor, water, air or decor",
+    "sharp natural face, believable hands and feet"
+  ],
+  "negative": "child, teenage, male body, nude, topless, body paint only, fabric dress, textile dress, normal clothing, latex suit, static standing pose, mannequin pose, portrait crop, missing feet, flat backdrop, no depth, weak impasto, smooth clean garment, broken hands, broken feet, extra limbs, blurry face, watermark, text"
+}

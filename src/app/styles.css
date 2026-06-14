@@ -1,0 +1,559 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Fira+Sans:wght@300;400;500;600;700&display=swap");
+
+:root {
+  color-scheme: dark;
+  font-family: "Fira Sans", Arial, sans-serif;
+  color: #f7f2e8;
+  background: #101114;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #101114;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.topbar,
+.tabs,
+.panel,
+.notice,
+.footer {
+  border: 1px solid #343741;
+  background: #181a20;
+  border-radius: 8px;
+}
+
+.topbar {
+  min-height: 74px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.brand {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #4b5563;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  background: #22c55e;
+  color: #06130a;
+  font-family: "Fira Code", monospace;
+  font-weight: 700;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 21px;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.brand p,
+.panel-header p,
+.footer {
+  color: #b8b3a7;
+  font-size: 13px;
+  word-break: break-word;
+}
+
+.status-row,
+.feedback-row,
+.search-row,
+.pager {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.status,
+.pill {
+  min-height: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 9px;
+  border-radius: 8px;
+  border: 1px solid #343741;
+  color: #d8d3c8;
+  background: #20242b;
+  font-size: 13px;
+}
+
+.status strong {
+  font-family: "Fira Code", monospace;
+  color: #f7f2e8;
+}
+
+.status.ok {
+  border-color: #166534;
+}
+
+.status.bad {
+  border-color: #9f1239;
+}
+
+.pill.completed,
+.status.ok strong {
+  color: #22c55e;
+}
+
+.pill.running {
+  color: #38bdf8;
+}
+
+.pill.failed {
+  color: #fb7185;
+}
+
+.icon-button,
+.compact-button,
+.search-row button,
+.pager button,
+.feedback-row button,
+.primary-action,
+.segmented button {
+  min-height: 38px;
+  border: 1px solid #3c404c;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #f7f2e8;
+  background: #20242b;
+  transition: border-color 180ms ease, background-color 180ms ease, color 180ms ease;
+}
+
+.icon-button {
+  width: 40px;
+  padding: 0;
+}
+
+.compact-button,
+.search-row button,
+.pager button,
+.feedback-row button {
+  padding: 0 12px;
+}
+
+.icon-button:hover,
+.compact-button:hover,
+.search-row button:hover,
+.pager button:hover,
+.segmented button:hover {
+  border-color: #38bdf8;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding: 5px;
+  gap: 5px;
+}
+
+.tab {
+  min-height: 42px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #b8b3a7;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.tab.active {
+  background: #242933;
+  color: #f7f2e8;
+}
+
+.notice {
+  padding: 10px 12px;
+  color: #fbbf24;
+  font-family: "Fira Code", monospace;
+  font-size: 13px;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(320px, 420px) minmax(0, 1fr);
+  gap: 14px;
+}
+
+.panel {
+  min-width: 0;
+  padding: 14px;
+}
+
+.panel-header {
+  min-height: 34px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #d8d3c8;
+  font-size: 13px;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid #3c404c;
+  border-radius: 8px;
+  outline: none;
+  color: #f7f2e8;
+  background: #111318;
+  padding: 10px 11px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 170px;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #38bdf8;
+}
+
+.segmented {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+}
+
+.segmented button {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.segmented button.selected {
+  border-color: #22c55e;
+  background: #153622;
+  color: #a7f3d0;
+}
+
+.grid-fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.primary-action {
+  width: 100%;
+  min-height: 46px;
+  padding: 0 14px;
+  border-color: #15803d;
+  background: #22c55e;
+  color: #06130a;
+  font-weight: 700;
+}
+
+.primary-action:disabled,
+.feedback-row button:disabled,
+.pager button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+}
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  min-height: 620px;
+}
+
+.result-image,
+.empty-preview {
+  width: 100%;
+  flex: 1;
+  min-height: 480px;
+  border: 1px solid #343741;
+  border-radius: 8px;
+  background: #111318;
+}
+
+.result-image {
+  object-fit: contain;
+}
+
+.empty-preview {
+  display: grid;
+  place-items: center;
+  color: #b8b3a7;
+  text-align: center;
+  padding: 18px;
+}
+
+.feedback-row {
+  margin-top: 12px;
+}
+
+.success-button {
+  border-color: #166534;
+  background: #153622;
+}
+
+.danger-button {
+  border-color: #9f1239;
+  background: #3d1220;
+}
+
+.full-panel {
+  min-height: 620px;
+}
+
+.gallery-head {
+  align-items: flex-start;
+}
+
+.search-row {
+  margin-left: auto;
+}
+
+.search-row input {
+  width: min(260px, 42vw);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 10px;
+}
+
+.thumb {
+  margin: 0;
+  border: 1px solid #343741;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #111318;
+}
+
+.thumb img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+}
+
+.thumb figcaption {
+  min-height: 38px;
+  padding: 7px 8px;
+  color: #b8b3a7;
+  font-size: 12px;
+  line-height: 1.25;
+  word-break: break-word;
+}
+
+.pager {
+  margin-top: 14px;
+  justify-content: center;
+}
+
+.job-table {
+  display: grid;
+  gap: 6px;
+}
+
+.job-row {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid #343741;
+  border-radius: 8px;
+  background: #111318;
+  color: #f7f2e8;
+  display: grid;
+  grid-template-columns: 100px minmax(160px, 1fr) 110px 100px;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  text-align: left;
+}
+
+.job-row.active {
+  border-color: #38bdf8;
+}
+
+.log-view {
+  margin: 12px 0 0;
+  min-height: 240px;
+  max-height: 360px;
+  overflow: auto;
+  border: 1px solid #343741;
+  border-radius: 8px;
+  padding: 12px;
+  color: #d8d3c8;
+  background: #0b0d10;
+  white-space: pre-wrap;
+}
+
+.versions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 14px;
+}
+
+.version-panel dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 8px 12px;
+}
+
+.version-panel dt {
+  color: #b8b3a7;
+}
+
+.version-panel dd {
+  margin: 0;
+  word-break: break-word;
+}
+
+.lock-list {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.lock-list span {
+  border: 1px solid #3c404c;
+  border-radius: 8px;
+  padding: 5px 8px;
+  color: #d8d3c8;
+  background: #20242b;
+  font-size: 12px;
+}
+
+.footer {
+  min-height: 38px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 860px) {
+  .app-shell {
+    padding: 10px;
+  }
+
+  .topbar,
+  .workspace,
+  .gallery-head {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .workspace {
+    display: grid;
+  }
+
+  .tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid-fields,
+  .job-row {
+    grid-template-columns: 1fr;
+  }
+
+  .preview,
+  .full-panel {
+    min-height: auto;
+  }
+
+  .result-image,
+  .empty-preview {
+    min-height: 360px;
+  }
+
+  .search-row {
+    margin-left: 0;
+  }
+
+  .search-row input {
+    width: 100%;
+  }
+}

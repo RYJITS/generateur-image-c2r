@@ -1,0 +1,35 @@
+{
+  "id": "v6-exact-100",
+  "label": "C2R V6 Exact 100",
+  "status": "active",
+  "target": "100 percent valid-image quality target without cloning one reference",
+  "model": "juggernaut_xl.safetensors",
+  "profile": "realiste",
+  "width": 832,
+  "height": 1216,
+  "steps": 46,
+  "guidance": 5.65,
+  "poseStrength": 0.38,
+  "poseEnd": 0.52,
+  "textureStrength": 0,
+  "textureEnd": 0.42,
+  "loras": [
+    { "name": "sdxl_detail.safetensors", "strength": 0.74 },
+    { "name": "sdxl_anatomy.safetensors", "strength": 0.9 },
+    { "name": "sdxl_oil_painting.safetensors", "strength": 1.08 }
+  ],
+  "promptLock": [
+    "C2R V6 Image valide quality target",
+    "vary human identity, pose, decor and color palette every generation",
+    "adult woman 25 to 38, mature adult facial proportions",
+    "three-quarter or frontal face with visible open eyes",
+    "mandatory FACS emotion code visible in the face but no rendered text",
+    "hyperrealistic face, pores, skin tension, corneal highlights",
+    "hyperrealistic limb anatomy, separated fingers, readable feet and toes",
+    "open real universe with foreground, mid-ground and far background depth",
+    "woman centered in open space, never pressed against a wall",
+    "outfit made only from thick wet impasto oil paint, no fabric logic",
+    "paint-to-world continuity across ground, water, air, vegetation, architecture or reflections"
+  ],
+  "negative": "child, teenage, childlike face, male body, nude, topless, body paint only, fabric dress, textile dress, normal clothing, stitched seams, zipper, buttons, tank top, thin straps, long sleeves, gloves, pressed against wall, pasted on wall, flat wall pose, cloned reference pose, repeated identical character, second woman, multiple women, CGI, cartoon, mosaic dress, stained glass panels, closed eyes, blank face, profile-only face, black void, studio wall, missing feet, cropped limbs, object in hand, paintbrush, weapon, bodysuit, leggings, smooth clean garment, thin paint stains, broken hands, broken feet, extra limbs, watermark, text"
+}
