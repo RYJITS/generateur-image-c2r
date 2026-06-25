@@ -27,6 +27,12 @@ npm run start
 npm run build
 ```
 
+## Captures d'ecran
+
+![Capture desktop](docs/github-captures/05-generateur-image-c2r-2026-06-21_23-36-58-desktop.png)
+
+![Capture mobile](docs/github-captures/05-generateur-image-c2r-2026-06-21_23-36-58-mobile.png)
+
 ## Variables d'environnement
 
 Copier `.env.example` vers `.env` en local puis remplir les valeurs privees.
