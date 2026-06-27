@@ -69,3 +69,10 @@ archives/
 _archive/
 _deploy/
 99_Archive/
+
+# Orchestrateur - publication GitHub publique
+public/generated/videos/
+docs/daily-tests/evidence/
+*.zip
+*.7z
+*.rar

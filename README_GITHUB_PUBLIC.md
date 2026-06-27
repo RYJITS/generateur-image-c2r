@@ -1,12 +1,12 @@
 # Generateur image C2R
 
-Studio local de generation d'images C2R. Il expose une interface web, lit le corpus Image valide, lance les generations et organise les retours utiles.
+## Concept
 
-## Objectif
+Studio local de generation d'images C2R. Il expose une interface web, lit le corpus Image valide, lance les generations et organise les retours utiles.
 
 Creer rapidement des images coherentes avec les projets et transformer les essais visuels en assets reutilisables.
 
-## Fonctions principales
+## Fonctionnalites principales
 
 - Centralise une interface de generation d'images.
 - Lit le corpus Image valide via manifeste.
@@ -29,9 +29,9 @@ npm run build
 
 ## Captures d'ecran
 
-![Capture desktop](docs/github-captures/05-generateur-image-c2r-2026-06-21_23-36-58-desktop.png)
+![Capture desktop](docs/github-captures/05-generateur-image-c2r-2026-06-28_00-10-53-desktop.png)
 
-![Capture mobile](docs/github-captures/05-generateur-image-c2r-2026-06-21_23-36-58-mobile.png)
+![Capture mobile](docs/github-captures/05-generateur-image-c2r-2026-06-28_00-10-53-mobile.png)
 
 ## Variables d'environnement
 

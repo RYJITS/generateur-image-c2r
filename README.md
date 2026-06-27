@@ -1,30 +1,42 @@
-# Generateur Image C2R
+# Generateur image C2R
 
-Application web locale pour piloter C2R hors Telegram.
+## Concept
 
-## Demarrage
+Studio local de generation d'images C2R. Il expose une interface web, lit le corpus Image valide, lance les generations et organise les retours utiles.
+
+Creer rapidement des images coherentes avec les projets et transformer les essais visuels en assets reutilisables.
+
+## Fonctionnalites principales
+
+- Centralise une interface de generation d'images.
+- Lit le corpus Image valide via manifeste.
+- Lance des jobs de generation et suit leurs resultats.
+- Aide a valider ou rejeter les images produites.
+
+## Installation locale
 
 ```powershell
-cd "D:\00_Cerveau_IA\Projet\05_Generateur image C2R"
 npm install
-npm run manifest:refresh
-npm run dev
 ```
 
-URL locale par defaut:
+## Lancement
 
-`http://localhost:5176`
+```powershell
+npm run dev
+npm run start
+npm run build
+```
 
-## Principe
+## Captures d'ecran
 
-- `src/app` contient l'interface web.
-- `src/server` expose l'API locale.
-- `src/c2r` contient les adaptateurs C2R, manifestes et jobs.
-- `versions` contient les versions concretes C2R.
-- `runtime` contient outputs, logs, jobs et feedbacks locaux ignores par Git.
+![Capture desktop](docs/github-captures/05-generateur-image-c2r-2026-06-28_00-10-53-desktop.png)
 
-Le corpus `Image valide` n'est pas copie dans le depot. Il est lu depuis le dossier existant et suivi avec un manifeste JSON.
+![Capture mobile](docs/github-captures/05-generateur-image-c2r-2026-06-28_00-10-53-mobile.png)
 
-## Compatibilite
+## Variables d'environnement
 
-Telegram reste dans `D:\00_Cerveau_IA\Conpetances` et n'est pas deplace dans cette premiere version. L'application web appelle le script C2R legacy configure dans `config/c2r.paths.json`.
+Copier `.env.example` vers `.env` en local puis remplir les valeurs privees.
+
+## Securite
+
+Ne jamais publier `.env`, tokens, sessions, logs sensibles, cles privees ou donnees personnelles.
