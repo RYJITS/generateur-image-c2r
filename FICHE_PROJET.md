@@ -2,7 +2,7 @@
 
 ## Liens vers l'application
 - Lien public: non detecte
-- GitHub: https://github.com/RYJITS/C2R
+- GitHub: https://github.com/RYJITS/generateur-image-c2r
 
 ## A quoi sert le projet
 Generateur image C2R est un studio local pour piloter la generation d'images. Il permet de consulter le corpus Image valide, lancer des generations, suivre les jobs, recuperer les images produites et indiquer celles qui doivent etre gardees ou rejetees.
@@ -51,10 +51,5 @@ L'outil a ete concu comme une passerelle propre entre l'ancienne chaine C2R et u
 
 ## Mises a jour
 - Fiche actualisee depuis le registre orchestrateur et le catalogue projet.
-- Changements locaux detectes: relire la fiche apres validation des modifications.
-- Derniere mise a jour registre connue: 2026-06-21T21:46:01.644Z.
-
-## Derniere mise a jour
-2026-06-21T21:46:01.647Z
 
 > Fichier genere par l'orchestrateur pour le hub Site Ma Methode.
